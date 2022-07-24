@@ -1,9 +1,11 @@
 import Button from '../../components/Button'
 import styles from './index.module.scss'
-
-export default function Popup(props: any) {
+interface type {
+    getPopShow?:any
+}
+export default function Popup({getPopShow}:type) {
     return <div className={styles.my_popup}>
-        <i className={styles.close}></i>
+        <i className={styles.close} onClick={()=>{getPopShow(false)}}></i>
         <p className={`${styles.italic} ${styles.po_title}`}>Thank you for your participation. We support gem upgrade</p>
         <ul>
             <li>

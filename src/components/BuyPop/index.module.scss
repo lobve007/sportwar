@@ -1,0 +1,139 @@
+@import '../../assets/css/mixin.scss';
+
+.buy_pop {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: #3E4959;
+    border-radius: 0.08rem;
+    width: 6.4rem;
+    height: 4.5rem;
+
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.2rem 0.28rem;
+
+        p {
+            font-size: 0.3rem;
+            line-height: 0.36rem;
+            font-weight: 500;
+        }
+    }
+
+    .close {
+        margin-left: auto;
+        width: 0.25rem;
+        height: 0.25rem;
+    }
+
+    .con_wrap {
+        padding: 0 .4rem 0 0.2rem;
+        margin-top: -.15rem;
+        display: flex;
+        align-items: center;
+
+
+        .bg_img {
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../../assets/image/blind.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0.4rem;
+
+            &>span {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-image: url(../../assets/image/BTC.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 0.08rem;
+                }
+            }
+
+            .counter {
+                background-color: #4C607C;
+                border-radius: 0.04rem;
+                padding: 0.04rem 0.05rem;
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+
+                span {
+                    margin: 0 0.22rem;
+                    width: 0.32rem;
+                    text-align: center;
+                }
+
+
+                i {
+                    background-color: #050505;
+                    font-style: normal;
+                    width: 0.32rem;
+                    height: 0.32rem;
+                    line-height: 0.32rem;
+                    text-align: center;
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: .2rem .2rem 0.2rem 0.2rem;
+        a {
+            margin:  .2rem auto;
+        }
+
+        .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>span {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-image: url(../../assets/image/BTC.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 0.08rem;
+                }
+            }
+        }
+
+    }
+}

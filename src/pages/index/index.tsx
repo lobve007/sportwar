@@ -1,9 +1,19 @@
+import { useContext, useEffect, useState } from "react";
 import Button from "../../components/Button";
+import BuyPop from "../../components/BuyPop";
 import RoadMap from "../../components/RoadMap";
-import styles from './index.module.scss';
+import { AppContext } from "../../context/AppContext";
 import useSetPageIndex from "../../hooks/useSetPageIndex";
+import styles from './index.module.scss';
 export default function Index() {
-    // useSetPageIndex(1);
+    useSetPageIndex(1);
+    const [btnStatus, setBtnStatus] = useState({} as any)
+    const { isLogin, isWhiteList, hasNft } = useContext(AppContext);
+    const [buyPopIsShow, setBuyPopIsShow] = useState(false);
+    useEffect(() => {
+        getBtnStatus(isLogin, isWhiteList, hasNft, setBtnStatus, setBuyPopIsShow);
+    }, [])
+
     return <>
         <div className={styles.pre_sale}>
             <h3 className={styles.title}><span>NFT blind box </span><i>pre-sale</i></h3>
@@ -15,8 +25,17 @@ export default function Index() {
                 <div className={styles.clock}>2022.9.1-2022.11.1</div>
             </div>
             <div className={styles.btn_wrap}>
-                <Button type="gray" text="GET LIST" linkUrl='/whiteList' />
-                <Button text="BUY NOW" />
+                {
+                    Object.keys(btnStatus).map((item, index) => {
+                        return <Button
+                            key={index}
+                            text={btnStatus[item].text}
+                            type={btnStatus[item].type}
+                            linkUrl={btnStatus[item].linkUrl}
+                            clcikHandle={btnStatus[item].clcikHandle}
+                        />
+                    })
+                }
             </div>
         </div>
         <div className={styles.stake}>
@@ -34,5 +53,24 @@ export default function Index() {
             </div>
         </div>
         <RoadMap isIndex />
+        {buyPopIsShow && <BuyPop getPopShow={setBuyPopIsShow} />}
     </>
+}
+
+function getBtnStatus(isLogin: boolean, isWhiteList: boolean, hasNft: boolean, setBtnStatus: any, setBuyPopIsShow: any) {
+    if (!isWhiteList) { // 非白名单用户
+        setBtnStatus({
+            btn1: {
+                type: "gray",
+                text: "GET LIST",
+                linkUrl: '/whiteList'
+            },
+            btn2: {
+                // type: "gray",
+                text: "BUY NOW",
+                clcikHandle: ()=>{setBuyPopIsShow(true)}
+                // linkUrl: '/whiteList'
+            },
+        })
+    }
 }

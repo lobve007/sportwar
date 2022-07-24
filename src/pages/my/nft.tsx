@@ -1,6 +1,5 @@
 import styles from './index.module.scss'
 import BlindBox from '../../components/BlindBox'
-import LoginPop from '../../components/LoginPop'
 export default function Nft() {
     return <>
         <div className={styles.nft_info}>
@@ -11,8 +10,7 @@ export default function Nft() {
             <BlindBox state='buy' />
             <BlindBox state='open' />
             <BlindBox state='sold out' />
-            <BlindBox state='buy' />
+            <BlindBox state='upgrade' />
         </div>
-        <LoginPop isCenter />
     </>
 }

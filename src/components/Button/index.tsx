@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 interface btnObj {
     text: string,
     type?: 'default' | 'gray' | 'gold' | 'gray2',
-    linkUrl?: string
+    linkUrl?: string,
+    clcikHandle?:any
 }
 export default function Button({
     text,
     type = "default",
-    linkUrl = ""
+    linkUrl = "",
+    clcikHandle=()=>{}
 }: btnObj) {
-    return <Link to={linkUrl} className={styles[`btn-${type}`]}>{text}</Link>
+    return <Link to={linkUrl} className={styles[`btn-${type}`]} onClick={clcikHandle}>{text}</Link>
 }

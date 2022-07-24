@@ -4,6 +4,21 @@
     border-radius: 0.08rem;
     background-color: #272D37;
 
+    &.nft_popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 14rem;
+        height: 6rem;
+
+        .close {
+            position: absolute;
+            right: 0.2rem;
+            top: 0.2rem;
+        }
+    }
+
     .card_wrap {
         display: flex;
         align-items: center;

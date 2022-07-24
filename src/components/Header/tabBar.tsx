@@ -32,9 +32,11 @@ export default function TabBar(props: any) {
 
 function handleClick(e: any, item: any, navigate: any, setPageIndex: any) {
     let { route, list, index } = item;
-    setPageIndex(index)
-    sessionStorage.setItem("pageIndex", index.toString())
-    if (!list) navigate(route);
+    if (!list) {
+        navigate(route);
+        setPageIndex(index)
+        sessionStorage.setItem("pageIndex", index.toString())
+    }
 }
 
 function tabList() {
@@ -71,7 +73,7 @@ function tabList() {
         {
             index: 5,
             text: 'Upgrade NFT',
-            route: '/home'
+            route: '/updatenft'
         },
         {
             index: 6,

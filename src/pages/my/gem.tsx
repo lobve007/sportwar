@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Button from '../../components/Button'
 import styles from './index.module.scss'
 import Popup from './popup'
-export default function Token() {
+export default function Gem() {
+    const [isShow, setIsShow] = useState(false);
+
     let list = {
         red: {
             num: '2',
@@ -27,13 +30,13 @@ export default function Token() {
                         const num = list[item].num
                         return <li key={index}>
                             <div className={styles.bg_img}></div>
-                            <p style={{fontWeight:700}}>{`gemstone    x    ${num}`}</p>
+                            <p style={{ fontWeight: 700 }}>{`gemstone    x    ${num}`}</p>
                         </li>
                     })
                 }
             </ul>
-            <Button text="Get more gems" />
-            <Popup />
+            <Button text="Get more gems" clcikHandle={() => { setIsShow(true) }} />
+            {isShow && <Popup getPopShow={setIsShow} />}
         </div>
     </>
 }

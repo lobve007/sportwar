@@ -1,0 +1,49 @@
+@import '../../assets/css/mixin.scss';
+
+.white_list_wrap {
+    padding-bottom: 0.4rem;
+    h3 {
+        padding: 0.4rem 0 0.43rem;
+    }
+    ul {
+
+        li {
+            counter-increment: section;
+            position: relative;
+            padding-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            &::before {
+                content: counter(section);
+                display: block;
+                margin-right: 0.23rem;
+                width: 0.42rem;
+                height: 0.42rem;
+                border-radius: 50%;
+                background-color: $mainColor;
+                color: #000;
+                font-size: 0.3rem;
+                text-align: center;
+                font-weight: bold;
+                line-height: 0.42rem;
+                font-style: italic;
+            }
+
+            i {
+                color: $mainColor;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.header_banner {
+    margin-top: 0.89rem;
+    width: 100%;
+    padding-bottom: 26.153%;
+    background-image: url(../../assets/image/banner_wl.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.08rem;
+}
+

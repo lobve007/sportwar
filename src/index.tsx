@@ -18,6 +18,7 @@ const RoadMap = lazy(() => import('./pages/roadMap'));
 const My = lazy(() => import('./pages/my'));
 const Donation = lazy(() => import('./pages/donation'));
 const WhiteList = lazy(() => import('./pages/whiteList'));
+const UpdateNft = lazy(() => import('./pages/updatenft'));
 const Wiki = lazy(() => import('./pages/wiki'));
 const Demo = lazy(() => import('./pages/demo'));
 const Stake = lazy(() => import('./pages/stake'));
@@ -45,6 +46,7 @@ createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictM
               <Route path="/my" element={<My />} />
               <Route path="/donation" element={<Donation />} />
               <Route path="/whiteList" element={<WhiteList />} />
+              <Route path="/updatenft" element={<UpdateNft />} />
               <Route path="/wiki" element={<Wiki />} />
               <Route path="/stake" element={<Stake />} />
               <Route path="/stake/nft" element={<Nft />} />

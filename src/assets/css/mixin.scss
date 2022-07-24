@@ -17,3 +17,13 @@ $mainColor:#DDFF31;
     padding: 0.3rem 0 0.5rem;
     font-weight: normal;
 }
+
+.close {
+    display: block;
+    background-image: url(../image/close.png);
+    width: 0.27rem;
+    height: 0.27rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
