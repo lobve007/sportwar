@@ -1,0 +1,13 @@
+@import '../../assets/css/mixin.scss';
+
+.wiki_wrap {
+    padding-bottom: 2rem;
+    h3 {
+        padding: 0.4rem 0 0.43rem;
+    }
+
+    i {
+        color: $mainColor;
+        font-weight: bold;
+    }
+}

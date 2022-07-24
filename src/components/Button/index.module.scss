@@ -1,0 +1,40 @@
+.btn-default,
+.btn-gray,
+.btn-gold,
+.btn-gray2
+ {
+    display: flex;
+    width: 2.75rem;
+    height: 0.64rem;
+    font-size: 0.2rem;
+    border-radius: 0.08rem;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-default {
+    background: linear-gradient(103.72deg, #FBFF23 2.33%, #00FF94 94.47%);
+    color: #000;
+}
+
+
+.btn-gray {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    color: #fff;
+}
+
+
+.btn-gray2 {
+    background: linear-gradient(103.72deg, #989898 2.33%, #607EAB 94.47%);
+    color: #000;
+}
+
+
+.btn-gold {
+    background: linear-gradient(91.43deg, #F9F699 -8.04%, #E2B76F 47.11%, #B3884D 103.22%);
+    color: #000;
+}

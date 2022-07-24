@@ -1,0 +1,26 @@
+.blind_box {
+    width: 3.84rem;
+    height: 4.43rem;
+    background-color: #272D37;
+    border-radius: 0.08rem;
+    display: flex;
+    flex-direction: column;
+
+    .img_bg {
+        width: 3.02rem;
+        height: 3.87rem;
+        background-image: url(../../assets/image/blind.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+    .btn_wrap {
+        margin-top: auto;
+        flex-shrink: 0;
+        padding: 0.4rem 0;
+        display: flex;
+        justify-content: center;
+        border-top: 0.01rem solid #000;
+    }
+}

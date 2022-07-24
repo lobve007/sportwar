@@ -1,0 +1,89 @@
+@import '../../assets/css/mixin.scss';
+
+.pre_sale {
+    margin-bottom: 0.65rem;
+    .img_wrap {
+        border-radius: 0.08rem;
+        width: 13rem;
+        height: 5rem;
+        background-image: url(../../assets/image/pre_sale.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .clock {
+        position: absolute;
+        height: 0.41rem;
+        border-radius: 0.08rem;
+        right: 0.2rem;
+        top: 0.2rem;
+        padding: 0 0.16rem;
+        background-color: rgba(#000,.4);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 0.2rem;
+        line-height: 0.24rem;
+        font-style: italic;
+        &::before {
+            content: '';
+            display: block;
+            width: 0.24rem;
+            height: 0.25rem;
+            background-image: url(../../assets/image/clock.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 0.14rem;
+        }
+    }
+
+    .btn_wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.4rem;
+        a+a {
+           margin-left: 0.23rem;
+        }
+    }
+}
+.stake {
+    margin-bottom: 0.65rem;
+    .img_text_wrap {
+        display: flex;
+
+        .left_img {
+            width: 9.7rem;
+            height: 3rem;
+            background-image: url(../../assets/image/stake.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 0.08rem;
+            overflow: hidden;
+        }
+
+        .right_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0.55rem;
+            .img_bg {
+                width: 1.5rem;
+                height: 1.8rem;
+                background-image: url(../../assets/image/gold.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            i {
+                font-size: 0.2rem;
+                line-height: 0.24rem;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 0.48rem;
+                margin-top: -0.18rem;
+            }
+        }
+    }
+}

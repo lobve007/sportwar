@@ -1,0 +1,169 @@
+@mixin image($name, $w, $h) {
+    width: $w;
+    height: $h;
+    background: url(../../assets/image/#{$name}.png) 0 0 no-repeat;
+    background-size: contain;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    height: 0.79rem;
+    background-color: rgba($color: #000000, $alpha: .8);
+    display: flex;
+    align-items: center;
+    padding: 0 0.47rem 0 0.53rem;
+    box-sizing: border-box;
+
+    .logo {
+        @include image('logo', 2.44rem, 0.4rem)
+    }
+}
+
+.tab_bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &>li {
+        margin: 0 0.2rem;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &>p {
+            color: #fff;
+            font-size: 0.18rem;
+            padding-bottom: 0.04rem;
+            box-sizing: border-box;
+        }
+
+        &.active {
+            &>p {
+                color: #DDFF31;
+                border-bottom: 0.02rem solid #DDFF31;
+                font-weight: bold;
+            }
+        }
+
+
+        &:hover {
+            &>p {
+                cursor: pointer;
+                color: #DDFF31;
+                border-bottom: 0.02rem solid #DDFF31;
+            }
+        }
+
+
+        &.has_list {
+            &:hover {
+                .tab_bar_pop {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &>li {
+        padding: 0.2rem;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+        }
+    }
+
+    .yuyan {
+        &::before {
+            @include image('yuyan', 0.19rem, 0.18rem);
+        }
+
+    }
+
+    .qianbao {
+        position: relative;
+
+        &:hover {
+            &>div {
+                display: block;
+            }
+        }
+
+        &>div {
+            display: none;
+            right: .2rem;
+            left: auto;
+            top: .65rem;
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #3E4959;
+                width: 0.08rem;
+                height: 0.08rem;
+                transform: rotate(45deg);
+                top: -0.03rem;
+                right: .5rem;
+            }
+        }
+        &::before {
+            @include image('qianbao', 0.17rem, 0.15rem)
+        }
+    }
+
+}
+
+.tab_bar_pop {
+    width: 2.28rem;
+    background-color: #384250;
+    border-radius: 0.08rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .7rem;
+    display: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -0.03rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        width: 0.12rem;
+        height: 0.12rem;
+        background-color: #384250;
+    }
+
+    li {
+        height: 0.76rem;
+        width: 100%;
+        font-size: 0.24rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: #DDFF31;
+        }
+
+        p {
+            line-height: 0.76rem;
+        }
+
+        &+li {
+            border-top: 0.01rem solid rgba(255, 255, 255, 0.1);
+        }
+    }
+}

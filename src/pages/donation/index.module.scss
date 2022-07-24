@@ -1,0 +1,52 @@
+.sub_title {
+    padding: 0.35rem 0 0.5rem;
+}
+
+.donation_wrap {
+    padding-bottom: 0.4rem;
+
+    li {
+        display: flex;
+        align-items: center;
+        height: 0.85rem;
+        border-radius: 0.08rem;
+        padding: 0 0.3rem;
+        padding-left: 1.1rem;
+        background-color: rgba(14, 11, 11, 0.1);
+        margin-bottom: 0.3rem;
+    
+        &::before {
+            content: '';
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    
+    
+        &.eth {
+            &::before {
+            }
+        }
+    
+        p {
+            &:first-child {
+                margin-right: 0.94rem;
+            }
+            &:nth-child(2) {
+                margin-right: 0.67rem;
+            }
+        }
+    
+        i {
+            display: block;
+            width: 1.7rem;
+            height: 0.46rem;
+            line-height: 0.46rem;
+            border-radius: 0.08rem;
+            border: 0.01rem solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}

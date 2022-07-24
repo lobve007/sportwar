@@ -1,0 +1,84 @@
+@import '../../assets/css/mixin.scss';
+
+.nft_card {
+    border-radius: 0.08rem;
+    background-color: #272D37;
+
+    .card_wrap {
+        display: flex;
+        align-items: center;
+        padding: 0.32rem 0.35rem;
+    }
+
+    .nft_earn {
+        padding: 0.2rem 0.15rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.01rem solid #000;
+
+        .earn {
+            padding: 0.15rem 0.22rem;
+            color: #3C3424;
+            background: linear-gradient(91.43deg, #F9F699 -8.04%, #E2B76F 47.11%, #B3884D 103.22%);
+            border-radius: 0.08rem;
+
+            span {
+                margin-right: 1.4rem;
+                font-weight: 600;
+                font-size: 0.28rem;
+                line-height: 0.34rem;
+            }
+
+            b {
+                font-weight: 700;
+                font-size: 0.32rem;
+                line-height: 0.39rem;
+            }
+        }
+
+        .btn_wrap {
+            margin-left: auto;
+            display: flex;
+            a+a {
+                margin-left: 0.2rem;
+            }
+        }
+    }
+
+    img {
+        max-height: 100%;
+        width: auto;
+        margin-right: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    .card_text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            padding-bottom: 0.3rem;
+        }
+
+        .level {
+            font-size: 0.3rem;
+            line-height: 0.36rem;
+            color: #FFC700;
+            padding-bottom: 0.4rem;
+        }
+
+        .parameter {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 0.3rem;
+            line-height: 0.37rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        a {
+            margin-left: auto;
+            margin-top: 0.7rem;
+        }
+    }
+}
