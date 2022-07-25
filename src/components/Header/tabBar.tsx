@@ -44,7 +44,7 @@ function tabList() {
         {
             index: 1,
             text: 'Home',
-            route: '/home'
+            route: '/'
         },
         {
             index: 2,
@@ -54,7 +54,7 @@ function tabList() {
         {
             index: 3,
             text: 'Guessing',
-            route: '/home'
+            route: '/'
         },
         {
             index: 4,

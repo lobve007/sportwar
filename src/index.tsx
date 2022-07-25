@@ -41,7 +41,7 @@ createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictM
         <main>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/home" element={<Index />} />
+              <Route path="/" element={<Index />} />
               <Route path="/roadmap" element={<RoadMap />} />
               <Route path="/my" element={<My />} />
               <Route path="/donation" element={<Donation />} />
