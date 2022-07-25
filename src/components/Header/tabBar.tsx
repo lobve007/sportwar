@@ -1,17 +1,12 @@
 import styles from './index.module.scss';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import TabBarPop from './tabBarPop';
-import { useContext, useEffect } from 'react';
-import { AppContext } from '../../context/AppContext';
+import useGetPageIndex from '../../hooks/useGetPageIndex';
 interface Obj {
     [index: string]: any;
 }
 export default function TabBar(props: any) {
-    const { pageIndex: pageIndex1, setPageIndex } = useContext(AppContext);
-    let pageIndex2 = sessionStorage.getItem("pageIndex");
-    let pageIndex = pageIndex1 === 1 ? pageIndex2 : pageIndex1;
-    console.log(pageIndex, pageIndex1, pageIndex2);
-
+    const pageIndex = useGetPageIndex()
     const navigate = useNavigate();
     let list = tabList();
     return <ul className={styles.tab_bar}>
@@ -19,7 +14,7 @@ export default function TabBar(props: any) {
             list.map((item) => {
                 return <li key={item.index}
                     className={`${item.index == pageIndex ? styles.active : ''} ${item.list ? styles.has_list : ''}`}
-                    onClick={(e: any) => handleClick(e, item, navigate, setPageIndex)}>
+                    onClick={(e: any) => handleClick(e, item, navigate)}>
                     <p>{item.text}</p>
                     {
                         item.list ? <TabBarPop list={item.list} /> : null
@@ -30,11 +25,10 @@ export default function TabBar(props: any) {
     </ul>
 }
 
-function handleClick(e: any, item: any, navigate: any, setPageIndex: any) {
+function handleClick(e: any, item: any, navigate: any) {
     let { route, list, index } = item;
     if (!list) {
         navigate(route);
-        setPageIndex(index)
         sessionStorage.setItem("pageIndex", index.toString())
     }
 }

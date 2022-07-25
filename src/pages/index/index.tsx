@@ -3,10 +3,8 @@ import Button from "../../components/Button";
 import BuyPop from "../../components/BuyPop";
 import RoadMap from "../../components/RoadMap";
 import { AppContext } from "../../context/AppContext";
-import useSetPageIndex from "../../hooks/useSetPageIndex";
 import styles from './index.module.scss';
 export default function Index() {
-    useSetPageIndex(1);
     const [btnStatus, setBtnStatus] = useState({} as any)
     const { isLogin, isWhiteList, hasNft } = useContext(AppContext);
     const [buyPopIsShow, setBuyPopIsShow] = useState(false);

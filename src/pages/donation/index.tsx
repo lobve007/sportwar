@@ -1,9 +1,7 @@
 import styles from './index.module.scss'
-import useSetPageIndex from '../../hooks/useSetPageIndex';
 
 export default function Index() {
     let list = getDonationList();
-    useSetPageIndex(4);
     return <>
     <div className={styles.donation_wrap}>
        <h3>Donation</h3>

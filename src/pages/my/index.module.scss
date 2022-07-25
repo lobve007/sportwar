@@ -63,8 +63,7 @@
                 width: 1.68rem;
             }
 
-            &.cur,
-            &:hover {
+            &.cur {
                 font-weight: bold;
                 color: #000;
                 background-color: $mainColor;

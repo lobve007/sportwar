@@ -1,7 +1,6 @@
 import RoadMap from "../../components/RoadMap";
-import useSetPageIndex from "../../hooks/useSetPageIndex";
+import useSetPageIndex from "../../hooks/useGetPageIndex";
 export default function RoadMapPage() {
-    useSetPageIndex(4);
     return <>
         <RoadMap isIndex={false} />
     </>

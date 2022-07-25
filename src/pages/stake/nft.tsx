@@ -1,5 +1,4 @@
 import NftCard from '../../components/NftCard'
-import useSetPageIndex from '../../hooks/useSetPageIndex'
 import styles from './index.module.scss'
 
 export default function Nft() {

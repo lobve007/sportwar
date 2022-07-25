@@ -30,7 +30,7 @@ export default function BuyPop({ title = "Comeplete checkout",getPopShow }: type
         <div className={styles.bottom}>
             <div className={styles.price}>
                 <p>Total</p>
-                <span>{price*count}</span>
+                <span>{(price*count).toFixed(6)}</span>
             </div>
             <Button text='upgrade' />
         </div>

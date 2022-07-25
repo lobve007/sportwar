@@ -1,11 +1,9 @@
 import { useContext, useEffect } from 'react'
 import { AppContext } from '../../context/AppContext'
-import useSetPageIndex from '../../hooks/useSetPageIndex';
 import styles from './index.module.scss'
 
 export default function WhiteList() {
     const { setHasBanner } = useContext(AppContext);
-    useSetPageIndex(1);
     useEffect(() => {
         setHasBanner(false);
         return () => {

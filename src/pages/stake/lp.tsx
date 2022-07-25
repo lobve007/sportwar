@@ -1,5 +1,4 @@
 import Button from '../../components/Button'
-import useSetPageIndex from '../../hooks/useSetPageIndex'
 import styles from './index.module.scss'
 
 export default function Lp() {

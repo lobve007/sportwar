@@ -1,8 +1,6 @@
 import Button from '../../components/Button';
 import styles from './index.module.scss'
-import useSetPageIndex from '../../hooks/useSetPageIndex';
 export default function Stake() {
-    useSetPageIndex(2)
     return <ul className={styles.page_war}>
         <li>
             <h3>War LP</h3>
