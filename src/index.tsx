@@ -1,6 +1,6 @@
-import React, { Suspense, useContext, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppContext, AppContextProvide } from "./context/AppContext";
+import { AppContextProvide } from "./context/AppContext";
 import { createRoot } from 'react-dom/client';
 import { Web3ReactProvider } from "@web3-react/core";
 import { providers } from "ethers";

@@ -1,4 +1,3 @@
-import useSetPageIndex from '../../hooks/useGetPageIndex'
 import styles from './index.module.scss'
 
 export default function Wiki() {

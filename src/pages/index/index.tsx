@@ -37,7 +37,7 @@ export default function Index() {
             </div>
         </div>
         <div className={styles.stake}>
-            <h3 className={styles.title}><span>STAKE</span></h3>
+            <h3 className={styles.title}><span>FARM</span></h3>
             <h6 className={styles.sub_title}>
                 <p>We support LP and NFT to improve users' stacking revenue</p>
             </h6>
@@ -46,7 +46,7 @@ export default function Index() {
                 <div className={styles.right_box}>
                     <div className={styles.img_bg}></div>
                     <i>STAKING</i>
-                    <Button text="SEE ALL" linkUrl="/stake" />
+                    <Button text="SEE ALL" linkUrl="/mining" />
                 </div>
             </div>
         </div>

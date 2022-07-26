@@ -11,7 +11,6 @@ export default function WhiteList() {
         }
     })
     return <div className={styles.white_list_wrap}>
-        <div className={styles.header_banner}></div>
         <h3>How to be in the whitelist ？</h3>
         <ul>
             <li>

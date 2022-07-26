@@ -1,10 +1,24 @@
 .banner {
     margin-bottom: 0.47rem;
+
     .banner_img {
         width: 100%;
         padding-bottom: 38.571%;
-        background-image: url(../../assets/image/banner.jpg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
+        background-image: url(../../assets/image/banner/index.jpg);
+
+        &.farm {
+            padding-bottom: 28.571%;
+            background-image: url(../../assets/image/banner/farm.jpg);
+        }
+
+        &.my {
+            background-image: url(../../assets/image/banner/my.jpg);
+        }
+
+        &.wl {
+            background-image: url(../../assets/image/banner/whitelist.jpg);
+        }
     }
 }
