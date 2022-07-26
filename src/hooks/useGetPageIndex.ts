@@ -7,7 +7,13 @@ export default function useGetPageIndex() {
     useEffect(() => {
         window.scrollTo(0, 0);
         switch (pathname) {
-            case '/stake':
+            case '/mining':
+                setPageIndex(2);
+                break;
+            case '/mining/lp':
+                setPageIndex(2);
+                break;
+            case '/mining/nft':
                 setPageIndex(2);
                 break;
             case '/roadmap':

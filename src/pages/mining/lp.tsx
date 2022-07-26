@@ -4,26 +4,26 @@ import styles from './index.module.scss'
 export default function Lp() {
     return <div className={styles.page_lp}>
         <div className={styles.page_nft_item}>
-            <h3>War LP</h3>
+            <h3>WAR / USDC LP Farm </h3>
             <ul className={`${styles.col_two} ${styles.lp_top}`}>
                 <li>
                     <img src={require('../../assets/image/lp.png')} alt="" />
                     <div className={styles.text}>
-                        <h3>Usd</h3>
+                        <h3>Total Staking Amount</h3>
                         <p>$  30000000.05</p>
                     </div>
                 </li>
                 <li>
                     <img src={require('../../assets/image/lp.png')} alt="" />
                     <div className={styles.text}>
-                        <h3>Wargold price</h3>
+                        <h3>War Price</h3>
                         <p>$  30000000.05</p>
                     </div>
                 </li>
             </ul>
         </div>
         <div className={styles.page_nft_item}>
-            <h3>War LP</h3>
+            <h3>My Profit</h3>
             <ul className={`${styles.col_three} ${styles.lp_mid}`}>
                 <li className={styles.lp_mid_one}>
                     <div className={styles.img_bg}>
@@ -36,18 +36,18 @@ export default function Lp() {
                 </li>
                 <li className={styles.lp_mid_two}>
                     <div className={styles.text}>
-                        <p><span>HAVE</span> <span>0.00</span></p>
-                        <p><span>LVT</span> <span>0.00</span></p>
+                        <p><span>My Owning</span> <span>0.00</span></p>
+                        <p><span>Staked</span> <span>0.00</span></p>
                     </div>
                     <div className={styles.btn_wrap}>
-                        <Button text='Token' />
-                        <Button text='empower' />
+                        <Button text='To get tokens' />
+                        <Button text='Authorize to stake' />
                     </div>
                 </li>
             </ul>
         </div>
         <div className={styles.page_nft_item}>
-            <h3>LP pond</h3>
+            <h3>LP mining pool</h3>
             <ul className={`${styles.col_three} ${styles.pond}`}>
                 <li>
                     <div className={styles.tit}>TVL</div>
@@ -56,7 +56,7 @@ export default function Lp() {
                     </div>
                 </li>
                 <li>
-                    <div className={styles.tit}>LVT</div>
+                    <div className={styles.tit}>Staked tokens</div>
                     <div className={styles.content}>
                         <p>ETH：40.10</p>
                         <p>WARGOLD：3192 </p>

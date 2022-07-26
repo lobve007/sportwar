@@ -7,7 +7,7 @@ interface type {
     state: string
 }
 export default function BlindBox(prop: type) {
-    
+
     const [buyPopIsShow, setBuyPopIsShow] = useState(false);
     const [nftCardIsShow, setNftCardIsShow] = useState(false);
     let {
@@ -16,28 +16,32 @@ export default function BlindBox(prop: type) {
     let btnText = "", btnType, clcikHandle;
 
     switch (state) {
-        case 'buy':
-            btnText = 'BUY'
+        case '1':
+            btnText = 'Purchase now'
             btnType = "default"
             clcikHandle = () => {
                 setBuyPopIsShow(true)
             }
             break;
-        case 'sold out':
-            btnText = 'SOLD OUT'
-            btnType = "gray2"
-            break;
-        case 'open':
-            btnText = 'OPEN'
+        case '2':
+            btnText = 'Open'
             btnType = "gold"
             break;
-            case 'upgrade':
-                btnText = 'UPGRADE'
-                btnType = "default"
-                clcikHandle = () => {
-                    setNftCardIsShow(true)
-                }
-                break;
+        case '3':
+            btnText = 'To be opened'
+            btnType = "gold"
+            break;
+        case '4':
+            btnText = 'Sold-out'
+            btnType = "gray2"
+            break;
+        case '5':
+            btnText = 'Upgrade/Evolve'
+            btnType = "default"
+            clcikHandle = () => {
+                setNftCardIsShow(true)
+            }
+            break;
         default:
             break;
     }
@@ -48,7 +52,7 @@ export default function BlindBox(prop: type) {
             <Button type={btnType as any} text={btnText} clcikHandle={clcikHandle} />
         </div>
         {buyPopIsShow && <BuyPop getPopShow={setBuyPopIsShow} />}
-        {nftCardIsShow && <NftCard isPopup getPopShow={setNftCardIsShow}/>}
+        {nftCardIsShow && <NftCard isPopup getPopShow={setNftCardIsShow} isStake={false} />}
     </div>
 
 }

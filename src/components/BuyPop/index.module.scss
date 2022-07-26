@@ -64,16 +64,8 @@
             &>span {
                 display: flex;
                 align-items: center;
-
-                &::before {
-                    content: '';
-                    display: block;
+                img {
                     width: 0.5rem;
-                    height: 0.5rem;
-                    background-image: url(../../assets/image/BTC.png);
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    margin-right: 0.08rem;
                 }
             }
 
@@ -101,6 +93,7 @@
                     text-align: center;
                     display: block;
                     cursor: pointer;
+                    user-select: none;
                 }
             }
         }
@@ -121,16 +114,8 @@
             &>span {
                 display: flex;
                 align-items: center;
-
-                &::before {
-                    content: '';
-                    display: block;
+                img {
                     width: 0.5rem;
-                    height: 0.5rem;
-                    background-image: url(../../assets/image/BTC.png);
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    margin-right: 0.08rem;
                 }
             }
         }

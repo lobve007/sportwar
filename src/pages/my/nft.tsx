@@ -3,14 +3,15 @@ import BlindBox from '../../components/BlindBox'
 export default function Nft() {
     return <>
         <div className={styles.nft_info}>
-            <p>This is the first World Cup team blind box released by sportswear. </p>
-            <p>It will cover all teams in the 2022 World Cup. It is exciting to have your favorite player card！</p>
+            <p>TThe first 2022 FIFA World Cup Team Blind Box will be unveiled by Sportswar. It covers 32 nation teams in the 2022 World Cup. </p>
         </div>
         <div className={styles.blind_list}>
-            <BlindBox state='buy' />
-            <BlindBox state='open' />
-            <BlindBox state='sold out' />
-            <BlindBox state='upgrade' />
+            <BlindBox state='1' />
+            <BlindBox state='2' />
+            <BlindBox state='3' />
+            <BlindBox state='4' />
+            <BlindBox state='5' />
+            
         </div>
     </>
 }

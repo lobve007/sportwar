@@ -21,9 +21,9 @@ const WhiteList = lazy(() => import('./pages/whiteList'));
 const UpdateNft = lazy(() => import('./pages/updatenft'));
 const Wiki = lazy(() => import('./pages/wiki'));
 const Demo = lazy(() => import('./pages/demo'));
-const Stake = lazy(() => import('./pages/stake'));
-const Nft = lazy(() => import('./pages/stake/nft'));
-const Lp = lazy(() => import('./pages/stake/lp'));
+const Mining = lazy(() => import('./pages/mining'));
+const Nft = lazy(() => import('./pages/mining/nft'));
+const Lp = lazy(() => import('./pages/mining/lp'));
 
 
 function getLibrary(provider: any): providers.Web3Provider {
@@ -49,9 +49,9 @@ createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictM
               <Route path="/whiteList" element={<WhiteList />} />
               <Route path="/updatenft" element={<UpdateNft />} />
               <Route path="/wiki" element={<Wiki />} />
-              <Route path="/stake" element={<Stake />} />
-              <Route path="/stake/nft" element={<Nft />} />
-              <Route path="/stake/lp" element={<Lp />} />
+              <Route path="/mining" element={<Mining />} />
+              <Route path="/mining/nft" element={<Nft />} />
+              <Route path="/mining/lp" element={<Lp />} />
             </Routes>
           </Suspense>
         </main>

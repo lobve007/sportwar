@@ -5,7 +5,6 @@
 
   html,
   body {
-      font-size: 100px;
       height: 100%;
       font-family: "Montserrat";
       color: #fff;
@@ -31,13 +30,13 @@
   }
 
 
-  @media screen and (min-width:760px) {
+  @media screen and (min-width:990px) {
       html {
-          font-size: 50px;
+          font-size: 70px;
       }
 
       main {
-          width: 1092px;
+          width: 910px;
       }
   }
 

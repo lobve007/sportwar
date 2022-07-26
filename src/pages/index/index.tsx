@@ -65,7 +65,7 @@ function getBtnStatus(isLogin: boolean, isWhiteList: boolean, hasNft: boolean, s
             },
             btn2: {
                 // type: "gray",
-                text: "BUY NOW",
+                text: "Purchase",
                 clcikHandle: ()=>{setBuyPopIsShow(true)}
                 // linkUrl: '/whiteList'
             },
