@@ -4,9 +4,9 @@ export default function Wiki() {
     return <div className={styles.wiki_wrap}>
         <h3>WIKI </h3>
         <p>
-            For you who want to learn more about blockchain, provide related tutorials, etc., you can check:
+        Please join our Discord and get verified, you will kindly find our Wiki
             <br />
-            <i>http://xxxxxxxxxxx.com</i>
+            <a href='https://discord.gg/sportswar' target={'_blank'}>https://discord.gg/sportswar</a>
         </p>
     </div>
 }

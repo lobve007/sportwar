@@ -1,23 +1,31 @@
 import styles from './index.module.scss'
+import copy from "copy-to-clipboard";
+import ComingSoon from '../../components/ComingSoon';
+import useComingSoon from '../../hooks/useComingSoon';
 
 export default function Index() {
     let list = getDonationList();
+    const { commingShow, setComingShow } = useComingSoon();
     return <>
-    <div className={styles.donation_wrap}>
-       <h3>Donation</h3>
-       <p className={styles.sub_title}>We are an entrepreneurial team full of enthusiasm, committed to providing users with better products. In order to make the product have richer playing methods and better experience, we decided to accept donations. Here is the address to receive donations. The use of each donation will be made public on the chain</p>
-        <ul>
-            {
-                list.map((item,index)=>{
-                    return <li key={index} className={styles[item.type.toLowerCase()]}>
-                        <p>{item.type}</p>
-                        <p>{item.address}</p>
-                        <i>COPY</i>
-                    </li>
-                })
-            }
-        </ul>
-    </div>
+        <div className={styles.donation_wrap}>
+            <h3>Donation</h3>
+            <p className={styles.sub_title}>We are a distributed team dedicated ourselves to build a WEB3 project globally. In order to ensure fairness and not be dominated by capital, we haven’t taken ANY capital investment. To operate Sportswar, we hereby gratefully accept donations as below. The use of the donation will be published on chain.</p>
+            <ul>
+                {
+                    list.map((item, index) => {
+                        return <li key={index} className={styles[item.class.toLowerCase()]} >
+                            <p>{item.type}</p>
+                            <p>{item.address}</p>
+                            <i onClick={() => {
+                                setComingShow(true)
+                                copy(item.address);
+                            }}>COPY</i>
+                        </li>
+                    })
+                }
+            </ul>
+        </div>
+        {commingShow && <ComingSoon value='token copied' />}
     </>
 }
 
@@ -25,19 +33,24 @@ function getDonationList() {
     let list = [];
     list = [
         {
-            type:'ETH',
-            count:'3.0000000',
-            address:'0x0000000000000000000'
+            type: 'BTC',
+            class:'btc',
+            address: '3EKKp8iH23L7qgqw4AdcUsncfcL3MMrDD8'
         },
         {
-            type:'BTC',
-            count:'3.0000000',
-            address:'0x0000000000000000000'
+            type: 'ETH',
+            class:'eth',
+            address: '0x1cF82f0985803d8920F73764000B4402BE9C73f3'
         },
         {
-            type:'GOU',
-            count:'3.0000000',
-            address:'0x0000000000000000000'
+            type: 'BNB Chain',
+            class:'bnb',
+            address: '0x1cF82f0985803d8920F73764000B4402BE9C73f3'
+        },
+        {
+            type: 'TRX',
+            class:'trx',
+            address: 'TKNr5u5b6mWf8UfwC29syZqRGQAqmtko4x'
         },
     ];
     return list;

@@ -43,7 +43,7 @@ function tabList() {
     let array: Obj[] = [
         {
             index: 1,
-            text: 'Home',
+            text: 'HOME',
             route: '/'
         },
         {
@@ -58,7 +58,7 @@ function tabList() {
         },
         {
             index: 4,
-            text: 'About us',
+            text: 'About US',
             list: [
                 {
                     text: 'Roadmap',

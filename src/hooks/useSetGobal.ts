@@ -28,7 +28,9 @@ export function useSetPageIndex() {
             case '/wiki':
                 setPageIndex(6);
                 break;
-
+            case '/my':
+                setPageIndex(0);
+                break;
             default:
                 setPageIndex(1);
                 break;
@@ -58,15 +60,18 @@ export function useSetBanner() {
                 setBannerType('my');
                 break;
             case '/updatenft':
+                setBannerType('my');
                 break;
             case '/wiki':
+                setBannerType('my');
                 break;
             case '/whiteList':
                 setBannerType('wl');
                 break;
-
-            default:
+            case '/my':
                 setBannerType('');
+                break;
+            default:
                 break;
         }
     }, [pathname])

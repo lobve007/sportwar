@@ -6,8 +6,10 @@
         padding-bottom:0.43rem;
     }
 
-    i {
+    a {
+        display: block;
         color: $mainColor;
         font-weight: bold;
+        margin-top: .1rem;
     }
 }

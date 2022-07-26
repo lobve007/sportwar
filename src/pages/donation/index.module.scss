@@ -18,21 +18,44 @@
         &::before {
             content: '';
             display: block;
+            width: 0.32rem;
+            height: 0.32rem;
             background-repeat: no-repeat;
             background-size: contain;
+            position: relative;
+            top: 0.01rem;
+            margin-right: 0.1rem;
         }
     
     
         &.eth {
             &::before {
+                background-image: url(../../assets/image/icon/eth.jpg);
+            }
+        }
+        &.btc {
+            &::before {
+                background-image: url(../../assets/image/icon/btc.jpg);
+            }
+        }
+        &.trx {
+            &::before {
+                background-image: url(../../assets/image/icon/trx.jpg);
+            }
+        }
+        &.bnb {
+            &::before {
+                background-image: url(../../assets/image/icon/bnb.jpg);
             }
         }
     
         p {
             &:first-child {
+                width: 2rem;
                 margin-right: 0.94rem;
             }
             &:nth-child(2) {
+                width: 8rem;
                 margin-right: 0.67rem;
             }
         }

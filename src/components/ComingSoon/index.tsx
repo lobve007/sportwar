@@ -1,7 +1,10 @@
 import styles from './index.module.scss';
-export default function ComingSoon() {
+interface type {
+  value?:string
+}
+export default function ComingSoon({value="Coming Soon！"}:type) {
  
   return <div className={styles.coming_pop}>
-    <p>Coming soon</p>
+    <p>{value}</p>
   </div> 
 }

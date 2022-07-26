@@ -8,7 +8,7 @@ export default function useComingSoon() {
         if (commingShow) {
             timer = setTimeout(() => {
                 setComingShow(false)
-            }, 3000);
+            }, 1000);
         }
         return () => {
             clearTimeout(timer)
