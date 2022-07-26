@@ -11,7 +11,6 @@ export default function Nft() {
             <BlindBox state='3' />
             <BlindBox state='4' />
             <BlindBox state='5' />
-            
         </div>
     </>
 }

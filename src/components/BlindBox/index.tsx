@@ -52,7 +52,7 @@ export default function BlindBox(prop: type) {
             <Button type={btnType as any} text={btnText} clcikHandle={clcikHandle} />
         </div>
         {buyPopIsShow && <BuyPop getPopShow={setBuyPopIsShow} />}
-        {nftCardIsShow && <NftCard isPopup getPopShow={setNftCardIsShow} isStake={false} />}
+        {nftCardIsShow && <NftCard isPopup getPopShow={setNftCardIsShow} isUpdate={true} />}
     </div>
 
 }

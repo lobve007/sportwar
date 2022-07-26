@@ -47,7 +47,7 @@ export default function My() {
         <div className={styles.top_bar}></div>
         <div className={styles.main_page}>
             <div className={styles.avatar}>
-                <img src={require('../../assets/image/tx_default.png')} alt="" />
+                {/* <img src={require('../../assets/image/tx_default.png')} alt="" /> */}
             </div>
             <ul className={styles.tab}>
                 {

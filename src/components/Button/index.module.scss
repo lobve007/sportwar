@@ -1,7 +1,8 @@
 .btn-default,
 .btn-gray,
 .btn-gold,
-.btn-gray2
+.btn-gray2,
+.btn-black
  {
     display: flex;
     width: 2.75rem;
@@ -36,4 +37,9 @@
 .btn-gold {
     background: linear-gradient(91.43deg, #F9F699 -8.04%, #E2B76F 47.11%, #B3884D 103.22%);
     color: #000;
+}
+
+.btn-black {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
 }
