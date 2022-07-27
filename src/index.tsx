@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppContextProvide } from "./context/AppContext";
 import { createRoot } from 'react-dom/client';
 import { Web3ReactProvider } from "@web3-react/core";
@@ -10,7 +10,6 @@ import Banner from "./components/Banner";
 // import './utils/rem';
 import './normalize.scss';
 import './common.scss';
-
 
 // 路由
 const Index = lazy(() => import('./pages/index'));
