@@ -71,6 +71,9 @@ export function useSetBanner() {
             case '/my':
                 setBannerType('');
                 break;
+            case '/':
+                setBannerType('index');
+                break;
             default:
                 break;
         }
