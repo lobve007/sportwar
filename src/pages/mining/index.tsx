@@ -9,7 +9,7 @@ export default function Mining() {
     return <>
         <ul className={styles.page_war}>
             <li>
-                <h3>WAR / USDC LP Farm </h3>
+                <h3>WAR-USDC LP Farm </h3>
                 <div className={styles.war_box}>
                     <img src={require('../../assets/image/banner/farm_lp.jpg')} alt="" />
                     <Button text='select' clcikHandle={() => { setComingShow(true); }} />

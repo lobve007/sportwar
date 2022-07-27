@@ -58,7 +58,7 @@ function tabList() {
         },
         {
             index: 4,
-            text: 'About US',
+            text: 'ABOUT US',
             list: [
                 {
                     text: 'Roadmap',

@@ -2,9 +2,11 @@
 
 .white_list_wrap {
     padding-bottom: 0.4rem;
+
     h3 {
         padding: 0.4rem 0 0.43rem;
     }
+
     ul {
 
         li {
@@ -13,6 +15,7 @@
             padding-bottom: 0.4rem;
             display: flex;
             align-items: center;
+
             &::before {
                 content: counter(section);
                 display: block;
@@ -28,10 +31,26 @@
                 line-height: 0.42rem;
             }
 
-            i {
+            a {
                 color: $mainColor;
                 font-weight: bold;
+                text-decoration: none;
             }
         }
+    }
+
+    .sp_btn {
+        display: flex;
+        width: 2.75rem;
+        height: 0.675rem;
+        font-size: 0.2rem;
+        border-radius: 0.08rem;
+        font-style: italic;
+        text-decoration: none;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(103.72deg, #FBFF23 2.33%, #00FF94 94.47%);
+        color: #000;
     }
 }

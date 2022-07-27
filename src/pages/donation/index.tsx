@@ -25,7 +25,7 @@ export default function Index() {
                 }
             </ul>
         </div>
-        {commingShow && <ComingSoon value='token copied' />}
+        {commingShow && <ComingSoon value='Copy Success' />}
     </>
 }
 
