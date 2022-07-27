@@ -12,16 +12,16 @@ export default function Mining() {
                 <h3>WAR-USDC LP Farm </h3>
                 <div className={styles.war_box}>
                     <img src={require('../../assets/image/banner/farm_lp.jpg')} alt="" />
-                    <Button text='select' clcikHandle={() => { setComingShow(true); }} />
-                    {/* <Button text='select' linkUrl={'/mining/lp'} /> */}
+                    <Button text='Select' clcikHandle={() => { setComingShow(true); }} />
+                    {/* <Button text='Select' linkUrl={'/mining/lp'} /> */}
                 </div>
             </li>
             <li>
                 <h3>NFT Farm</h3>
                 <div className={styles.war_box}>
                     <img src={require('../../assets/image/banner/farm_nft.jpg')} alt="" />
-                    {/* <Button text='select' linkUrl={'/mining/nft'} /> */}
-                    <Button text='select' clcikHandle={() => { setComingShow(true); }} />
+                    {/* <Button text='Select' linkUrl={'/mining/nft'} /> */}
+                    <Button text='Select' clcikHandle={() => { setComingShow(true); }} />
                 </div>
             </li>
         </ul>

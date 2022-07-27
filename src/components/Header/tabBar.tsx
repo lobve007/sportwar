@@ -68,14 +68,14 @@ function tabList() {
                     text: 'Donation',
                     route: '/donation',
                 },
-                {
-                    text: 'Daylog Clips',
-                    // route: '/donation',
-                },
-                {
-                    text: 'Function Voting',
-                    // route: '/donation',
-                },
+                // {
+                //     text: 'Daylog Clips',
+                //     // route: '/donation',
+                // },
+                // {
+                //     text: 'Function Voting',
+                //     // route: '/donation',
+                // },
             ]
         },
         {

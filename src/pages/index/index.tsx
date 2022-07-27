@@ -21,7 +21,7 @@ export default function Index() {
                 <p>So exciting to own a team card of your favoraite, moreover, the team cards do bring extra profits.</p>
             </h6>
             <div className={styles.img_wrap}>
-                <div className={styles.clock}>30-08-2022</div>
+                <div className={styles.clock}>Mint Date：30/08/2022</div>
             </div>
             <div className={styles.btn_wrap}>
                 {

@@ -11,10 +11,10 @@ export default function RoadMap(props: props) {
         <div className={styles.list_wrap}>
             <ul className={styles.content_list}>
                 <li className={styles.circle_title}>Q3</li>
-                <li>NFT blind box sales</li>
+                <li>NFT Mystery Box</li>
                 <li>NFT stake & mine</li>
                 <li> LP mining online</li>
-                <li> NFT upgrade</li>
+                <li> NFT Evolution</li>
                 <li> FOMO FIFA launch</li>
             </ul>
             <ul className={styles.content_list}>
@@ -32,7 +32,7 @@ export default function RoadMap(props: props) {
             </ul>
             <ul className={styles.content_list}>
                 <li className={styles.circle_title}>Q2</li>
-                <li>Development andoperation of fantasy Sports projects</li>
+                <li>Development and operation of fantasy Sports projects</li>
             </ul>
             <ul className={styles.content_list}>
                 <li className={styles.circle_title}>Q3</li>
