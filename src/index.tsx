@@ -11,7 +11,6 @@ import Banner from "./components/Banner";
 import './normalize.scss';
 import './common.scss';
 
-// 路由
 const Index = lazy(() => import('./pages/index'));
 const RoadMap = lazy(() => import('./pages/roadMap'));
 const My = lazy(() => import('./pages/my'));
