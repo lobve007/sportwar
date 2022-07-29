@@ -11,9 +11,9 @@ export default function PageFooter() {
       <h3>CONTACT US</h3>
       <ul>
         <li className={styles.email}><a onClick={() => { setComingShow(true); copy('contact@sportswar.com') }}> </a></li>
-        <li className={styles.twitter}><a href="https://twitter.com/Sportswar_real" target="_blank"> </a></li>
-        <li className={styles.miao}><a href="https://discord.gg/sportswar" target="_blank"> </a></li>
-        <li className={styles.fly}><a href="https://t.me/sportswar11" target="_blank"> </a></li>
+        <li className={styles.twitter}><a href="https://twitter.com/Sportswar_real" target="_blank" rel="noreferrer"> </a></li>
+        <li className={styles.miao}><a href="https://discord.gg/sportswar" target="_blank" rel="noreferrer"> </a></li>
+        <li className={styles.fly}><a href="https://t.me/sportswar11" target="_blank" rel="noreferrer"> </a></li>
       </ul>
     </footer>
     {commingShow && <ComingSoon value='Email copied' />}

@@ -1,7 +1,5 @@
 import styles from './index.module.scss';
 import { useNavigate } from 'react-router-dom';
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
 import useComingSoon from '../../hooks/useComingSoon';
 import ComingSoon from '../ComingSoon';
 interface type {

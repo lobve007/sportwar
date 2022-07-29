@@ -23,13 +23,13 @@ function DisconnectedContent() {
         await switchChain(ChainId);
         await activate(injected);
     }, [switchChain]);
-    useEffect(() => {
-        if (!active) {
-            handleConnect()
-        }
-    }, [active, handleConnect])
+    // useEffect(() => {
+    //     if (!active) {
+    //         handleConnect()
+    //     }
+    // }, [active, handleConnect])
     return (
-        <div>
+        <div style={{'marginTop':'520px'}}>
             <button onClick={handleConnect}>Connect wallet</button>
         </div>
     );
@@ -41,7 +41,7 @@ function ConnectedContent() {
     const {handleClaim, claimed} = useClaim()
     const [loading,setLoading] = useState(false)
     return (
-        <div>
+        <div style={{'marginTop':'320px'}}>
             <p>Your address is : {account}</p>
             <p>Your bnb balance is : {formatEther(balance)}</p>
             <p>your claime status: {claimed ? 'claimed' : 'not claimed'}</p>

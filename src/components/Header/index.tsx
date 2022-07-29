@@ -8,6 +8,6 @@ export default function PageHeader() {
     return <header className={styles.header}>
         <Link className={styles.logo} to="/"></Link>
        <TabBar />
-       {/* <User /> */}
+       <User />
     </header>
 }

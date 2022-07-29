@@ -1,18 +1,10 @@
-import { useContext, useEffect, useState } from 'react'
-import { AppContext } from '../../context/AppContext';
+import { useState } from 'react'
 import Gem from './gem';
 import styles from './index.module.scss'
 import Nft from './nft';
 import Token from './token';
 export default function My() {
-    const { setHasBanner } = useContext(AppContext);
     const [tabIndex, setTabIndex] = useState(1);
-    useEffect(() => {
-        setHasBanner(false);
-        return () => {
-            setHasBanner(true);
-        }
-    }, [])
     let pageCom = null;
     const tabList = [
         {

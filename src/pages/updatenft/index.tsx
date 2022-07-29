@@ -1,15 +1,6 @@
-import { useContext, useEffect } from 'react'
-import { AppContext } from '../../context/AppContext'
 import styles from './index.module.scss'
 
 export default function WhiteList() {
-    const { setHasBanner } = useContext(AppContext);
-    useEffect(() => {
-        setHasBanner(false);
-        return () => {
-            setHasBanner(true);
-        }
-    })
     return <div className={styles.white_list_wrap}>
         <div className={styles.header_banner}></div>
         <h3>UPDATENFT </h3>

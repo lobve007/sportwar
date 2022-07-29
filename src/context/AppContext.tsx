@@ -4,16 +4,13 @@ interface ContextType {
     [propsName:string]:any
 }
 export const AppContextProvide = ({children}:any) => {
-    const [hasBanner, setHasBanner] = useState(true); // 页面是否有banner
-    const [isLogin, setIsLog] = useState(false); // 是否已登录
+    const [isLogin, setIsLogin] = useState(222); // 是否已登录
     const [hasNft, setHasNft] = useState(false); // 是否已拥有用户
     const [isWhiteList, setIsWhiteList] = useState(false); // 是否白名单
     const value = {
-        hasBanner,
-        setHasBanner,
         isLogin,
         hasNft,
-        setIsLog,
+        setIsLogin,
         setHasNft,
         isWhiteList,
         setIsWhiteList,

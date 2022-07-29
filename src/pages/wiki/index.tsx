@@ -6,7 +6,7 @@ export default function Wiki() {
         <p>
         Please join our Discord and get verified, you will kindly find our wiki
             <br />
-            <a href='https://discord.gg/sportswar' target={'_blank'}>https://discord.gg/sportswar</a>
+            <a href='https://discord.gg/sportswar' rel='noreferrer' target={'_blank'}>https://discord.gg/sportswar</a>
         </p>
     </div>
 }

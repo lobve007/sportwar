@@ -25,6 +25,9 @@
             width: 0.6rem;
             height: 0.6rem;
             border-radius: 50%;
+            background: url(../../assets/image/BTC.png);
+            background-size: contain;
+            margin-right: 0.16rem;
         }
 
         h4 {
@@ -45,6 +48,7 @@
             display: flex;
             align-items: center;
             padding: 0.22rem 0;
+
             &:first-child {
                 display: block;
             }
@@ -70,5 +74,12 @@
                 height: 0.5rem;
             }
         }
+    }
+
+    .account {
+        margin-left: auto;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.5);
     }
 }
