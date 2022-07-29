@@ -12,7 +12,6 @@ import useBalance from '../../hooks/useBalance';
 export default function LoginPop({ isCenter = false }) {
     const navigate = useNavigate();
     const dataRef = useRef()
-    const [isLogin, seIsLogin] = useState(false)
     const switchChain = useSwitchChain();
     const { activate, deactivate, active, account } = useWeb3React();
     const balance = useBalance();
@@ -20,12 +19,6 @@ export default function LoginPop({ isCenter = false }) {
         await switchChain(ChainId);
         await activate(injected);
     }, [switchChain]);
-
-    useEffect(() => {
-        console.log( active,account);
-    }, [active])
-
-
 
     return <div className={`${styles.login_pop} ${isCenter ? styles.mid : ''}`}>
         <div className={styles.header}>
