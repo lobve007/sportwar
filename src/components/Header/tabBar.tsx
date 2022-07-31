@@ -49,7 +49,7 @@ function tabList() {
         {
             index: 2,
             text: 'FARM',
-            route: '/mining'
+            route: '/farm'
         },
         {
             index: 3,

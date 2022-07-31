@@ -4,16 +4,16 @@ interface ContextType {
     [propsName:string]:any
 }
 export const AppContextProvide = ({children}:any) => {
-    const [isLogin, setIsLogin] = useState(222); // 是否已登录
-    const [hasNft, setHasNft] = useState(false); // 是否已拥有用户
-    const [isWhiteList, setIsWhiteList] = useState(false); // 是否白名单
+    const [isLogin, setIsLogin] = useState(222); 
+    const [hasNft, setHasNft] = useState(false); 
+    const [loginShow, setLoginShow] = useState(false);
     const value = {
         isLogin,
         hasNft,
         setIsLogin,
         setHasNft,
-        isWhiteList,
-        setIsWhiteList,
+        loginShow,
+        setLoginShow,
     }
     return <AppContext.Provider value={value}>
         {children}

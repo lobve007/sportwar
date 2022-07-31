@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import ComingSoon from '../../components/ComingSoon';
 import useComingSoon from '../../hooks/useComingSoon';
 
-export default function Mining() {
+export default function Farm() {
     const { commingShow, setComingShow } = useComingSoon();
 
     return <>
@@ -12,16 +12,14 @@ export default function Mining() {
                 <h3>WAR-USDC LP Farm </h3>
                 <div className={styles.war_box}>
                     <img src={require('../../assets/image/banner/farm_lp.jpg')} alt="" />
-                    <Button text='Select' clcikHandle={() => { setComingShow(true); }} />
-                    {/* <Button text='Select' linkUrl={'/mining/lp'} /> */}
+                    <Button text='Select' linkUrl={'/farm/lp'} />
                 </div>
             </li>
             <li>
                 <h3>NFT Farm</h3>
                 <div className={styles.war_box}>
                     <img src={require('../../assets/image/banner/farm_nft.jpg')} alt="" />
-                    {/* <Button text='Select' linkUrl={'/mining/nft'} /> */}
-                    <Button text='Select' clcikHandle={() => { setComingShow(true); }} />
+                    <Button text='Select' linkUrl={'/farm/nft'} />
                 </div>
             </li>
         </ul>

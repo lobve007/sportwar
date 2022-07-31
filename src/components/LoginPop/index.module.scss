@@ -5,15 +5,7 @@
     z-index: 10;
     background: #3E4959;
     border-radius: 0.08rem;
-    width: 6rem;
-
-    &.mid {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 8rem;
-    }
-
+    width: 2.5rem;
 
     .header {
         display: flex;
@@ -69,17 +61,9 @@
             }
 
             a {
-                margin-left: auto;
-                width: 1.23rem;
-                height: 0.5rem;
+             text-decoration: none;
+             color: #fff;
             }
         }
-    }
-
-    .account {
-        margin-left: auto;
-        font-size: 18px;
-        line-height: 22px;
-        color: rgba(255, 255, 255, 0.5);
     }
 }

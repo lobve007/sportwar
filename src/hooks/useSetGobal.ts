@@ -7,13 +7,13 @@ export function useSetPageIndex() {
     useEffect(() => {
         window.scrollTo(0, 0);
         switch (pathname) {
-            case '/mining':
+            case '/farm':
                 setPageIndex(2);
                 break;
-            case '/mining/lp':
+            case '/farm/lp':
                 setPageIndex(2);
                 break;
-            case '/mining/nft':
+            case '/farm/nft':
                 setPageIndex(2);
                 break;
             case '/roadmap':
@@ -69,7 +69,7 @@ export function useSetBanner() {
                 setBannerType('wl');
                 break;
             case '/my':
-                setBannerType('');
+                setBannerType('my');
                 break;
             case '/':
                 setBannerType('index');

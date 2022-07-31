@@ -1,9 +1,27 @@
-import { useState } from 'react'
+import { useWeb3React } from '@web3-react/core';
+import axios from 'axios';
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Gem from './gem';
 import styles from './index.module.scss'
 import Nft from './nft';
 import Token from './token';
 export default function My() {
+    const {account,active} = useWeb3React()
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(!active) {
+            navigate('/')
+        }
+    },[])
+
+    useEffect(()=>{
+        axios.get(`user/getBox?id=${account}`).then(data=>{
+            console.log(data);
+        })
+    },[])
+
     const [tabIndex, setTabIndex] = useState(1);
     let pageCom = null;
     const tabList = [
@@ -36,22 +54,16 @@ export default function My() {
     }
 
     return <div className={styles.page_my}>
-        <div className={styles.top_bar}></div>
-        <div className={styles.main_page}>
-            <div className={styles.avatar}>
-                {/* <img src={require('../../assets/image/tx_default.png')} alt="" /> */}
-            </div>
-            <ul className={styles.tab}>
-                {
-                    tabList.map((item) => {
-                        return <li onClick={() => setTabIndex(item.index)} className={item.index === tabIndex ? styles.cur : ''} key={item.index}><p>{item.text}</p></li>
-                    })
-                }
-            </ul>
-            <section className={styles.page_wrap}>
-                {pageCom}
-            </section>
-        </div>
+        <ul className={styles.tab}>
+            {
+                tabList.map((item) => {
+                    return <li onClick={() => setTabIndex(item.index)} className={item.index === tabIndex ? styles.cur : ''} key={item.index}><p>{item.text}</p></li>
+                })
+            }
+        </ul>
+        <section className={styles.page_wrap}>
+            {pageCom}
+        </section>
     </div>
 
 

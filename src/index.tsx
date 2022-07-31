@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppContextProvide } from "./context/AppContext";
+import {  AppContextProvide } from "./context/AppContext";
 import { createRoot } from 'react-dom/client';
 import { Web3ReactProvider } from "@web3-react/core";
 import { providers } from "ethers";
@@ -11,6 +11,7 @@ import Banner from "./components/Banner";
 import './normalize.scss';
 import './common.scss';
 
+
 const Index = lazy(() => import('./pages/index'));
 const RoadMap = lazy(() => import('./pages/roadMap'));
 const My = lazy(() => import('./pages/my'));
@@ -19,9 +20,9 @@ const WhiteList = lazy(() => import('./pages/whiteList'));
 const UpdateNft = lazy(() => import('./pages/updatenft'));
 const Wiki = lazy(() => import('./pages/wiki'));
 const Demo = lazy(() => import('./pages/demo'));
-const Mining = lazy(() => import('./pages/mining'));
-const Nft = lazy(() => import('./pages/mining/nft'));
-const Lp = lazy(() => import('./pages/mining/lp'));
+const Farm = lazy(() => import('./pages/farm'));
+const Nft = lazy(() => import('./pages/farm/nft'));
+const Lp = lazy(() => import('./pages/farm/lp'));
 
 
 function getLibrary(provider: any): providers.Web3Provider {
@@ -47,9 +48,9 @@ createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictM
               <Route path="/whiteList" element={<WhiteList />} />
               <Route path="/updatenft" element={<UpdateNft />} />
               <Route path="/wiki" element={<Wiki />} />
-              <Route path="/mining" element={<Mining />} />
-              <Route path="/mining/nft" element={<Nft />} />
-              <Route path="/mining/lp" element={<Lp />} />
+              <Route path="/farm" element={<Farm />} />
+              <Route path="/farm/nft" element={<Nft />} />
+              <Route path="/farm/lp" element={<Lp />} />
             </Routes>
           </Suspense>
         </main>

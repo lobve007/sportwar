@@ -29,6 +29,7 @@ export function getMulContract(address: string, ABI: any): MulContract | null {
   try {
     return new MulContract(address, ABI);
   } catch (e) {
+    console.log(e)
     return null;
   }
 }
