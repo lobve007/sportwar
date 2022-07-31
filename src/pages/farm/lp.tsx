@@ -100,6 +100,6 @@ export default function Lp() {
                 </li>
             </ul>
         </div>
-        {stakeShow?<Stake />:null}
+        {stakeShow?<Stake setStakeShow={setStakeShow} />:null}
     </div >
 }
