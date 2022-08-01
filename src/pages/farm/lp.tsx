@@ -56,7 +56,7 @@ export default function Lp() {
                         <img src={require('../../assets/image/lp.png')} alt="" />
                     </div>
                     <div className={styles.text}>
-                        <p><span>Earnings</span> <span>{formatUnits(userPoolInfo.earned, decimals)} {symbol}</span></p>
+                        <p><span>Earnings</span> <span>{formatUnits(userPoolInfo.earned, decimals)}</span></p>
                         <Button text='HARVEST' clcikHandle={() => { getReward() }} />
                     </div>
                 </li>

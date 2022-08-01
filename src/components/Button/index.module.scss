@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.disabled {
+    background: gray !important;
+}
+
 .btn-default {
     background: linear-gradient(103.72deg, #FBFF23 2.33%, #00FF94 94.47%);
     color: #000;

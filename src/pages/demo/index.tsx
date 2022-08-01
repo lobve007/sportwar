@@ -151,6 +151,8 @@ function PoolContent() {
             input lp token amount to stake:
             <input value={stakeAmount} onChange={e => setStakeAmount(+e.target.value)} placeholder={'amount'}/>
         <button onClick={() => {
+            console.log(stakeAmount);
+            
             if(isNaN(stakeAmount)) {
                 alert('invalid stake amount')
                 return
