@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Button from '../Button';
-import BuyPop from '../BuyPop';
 import NftCard from '../NftCard';
 import styles from './index.module.scss';
 interface type {
@@ -9,7 +8,6 @@ interface type {
 }
 export default function BlindBox({ state,
     clcikHandle}: type) {
-    const [buyPopIsShow, setBuyPopIsShow] = useState(false);
     const [nftCardIsShow, setNftCardIsShow] = useState(false);
    
     let btnText = "", btnType;
@@ -45,7 +43,6 @@ export default function BlindBox({ state,
         <div className={styles.btn_wrap}>
             <Button type={btnType as any} text={btnText} clcikHandle={clcikHandle} />
         </div>
-        {buyPopIsShow && <BuyPop getPopShow={setBuyPopIsShow} />}
         {nftCardIsShow && <NftCard isPopup getPopShow={setNftCardIsShow} isUpdate={true} />}
     </div>
 

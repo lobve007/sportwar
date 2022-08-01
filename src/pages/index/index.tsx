@@ -1,17 +1,12 @@
 import { useWeb3React } from "@web3-react/core";
-import { useCallback, useContext, useEffect, useState } from "react";
+import {  useContext } from "react";
 import Button from "../../components/Button";
-import BuyPop from "../../components/BuyPop";
 import RoadMap from "../../components/RoadMap";
 import { AppContext } from "../../context/AppContext";
-import useController, { useIsWhiteList } from "../../hooks/useController";
-import useMyBoxes from "../../hooks/useMyBoxes";
-import useSwitchChain from "../../hooks/useSwitchChain";
-import { injected } from "../../utils/connector";
-import { ChainId } from "../../utils/constant";
+import useController from "../../hooks/useController";
 import styles from './index.module.scss';
 export default function Index() {
-    const { isClaimed, claimInfo, handleBuy, openBox } = useController();
+    const { isClaimed, handleBuy } = useController();
     const { active } = useWeb3React();
     const { setLoginShow } = useContext(AppContext);
    

@@ -1,7 +1,5 @@
 import Button from '../../components/Button';
 import styles from './index.module.scss'
-import ComingSoon from '../../components/ComingSoon';
-import useComingSoon from '../../hooks/useComingSoon';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { useWeb3React } from '@web3-react/core';
@@ -9,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Farm() {
     const navigate = useNavigate()
-    const { commingShow, setComingShow } = useComingSoon();
     const { setLoginShow } = useContext(AppContext);
     const { active } = useWeb3React();
     const handleClick = (e:any) => {
@@ -35,6 +32,5 @@ export default function Farm() {
                 </div>
             </li>
         </ul>
-        {commingShow && <ComingSoon />}
     </>
 }

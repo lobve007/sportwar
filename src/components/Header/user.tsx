@@ -1,7 +1,7 @@
 import { useWeb3React } from '@web3-react/core';
 import { useContext } from 'react'
 import { AppContext } from '../../context/AppContext'
-import LoginPop from '../LoginPop';
+import LoginPop from './loginPop';
 import styles from './index.module.scss'
 
 export default function User() {
@@ -16,8 +16,6 @@ export default function User() {
                 <li className={styles.qianbao}> {account?.slice(0, 4) + '...' + account?.slice(-4)}
                     <LoginPop />
                 </li>
-
-
         }
     </ul>
 }

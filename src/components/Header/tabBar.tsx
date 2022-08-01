@@ -1,9 +1,9 @@
 import styles from './index.module.scss';
 import { useNavigate } from 'react-router-dom';
 import TabBarPop from './tabBarPop';
-import ComingSoon from '../ComingSoon'
-import useComingSoon from '../../hooks/useComingSoon';
-import {useSetPageIndex} from '../../hooks/useSetGobal';
+import { useSetPageIndex } from '../../hooks/useSetGobal';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 interface Obj {
     [index: string]: any;
 }
@@ -11,32 +11,30 @@ export default function TabBar(props: any) {
     const [pageIndex] = useSetPageIndex()
     const navigate = useNavigate();
     let list = tabList();
-    const {commingShow, setComingShow} = useComingSoon();
+    const { seComingData } = useContext(AppContext);
+    const handleClick = (e: any, item: any) => {
+        let { route, list } = item;
+        if (!route && !list) {
+            seComingData({ isShow: true })
+            return;
+        }
+        if (!list) {
+            navigate(route);
+        }
+    }
 
     return <>
         <ul className={styles.tab_bar}>
             {list.map((item) => {
                 return <li key={item.index}
                     className={`${item.index === pageIndex ? styles.active : ''} ${item.list ? styles.has_list : ''}`}
-                    onClick={(e: any) => handleClick(e, item, navigate,setComingShow)}>
+                    onClick={(e: any) => handleClick(e, item)}>
                     <p>{item.text}</p>
                     {item.list ? <TabBarPop list={item.list} /> : null}
                 </li>;
             })}
         </ul>
-        {commingShow && <ComingSoon/>}
     </>
-}
-
-function handleClick(e: any, item: any, navigate: any,setComingShow:any) {
-    let { route, list } = item;
-    if (!route && !list) {
-        setComingShow(true);
-        return;
-    }
-    if (!list) {
-        navigate(route);
-    }
 }
 
 function tabList() {

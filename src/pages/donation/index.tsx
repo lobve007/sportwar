@@ -1,11 +1,11 @@
 import styles from './index.module.scss'
 import copy from "copy-to-clipboard";
-import ComingSoon from '../../components/ComingSoon';
-import useComingSoon from '../../hooks/useComingSoon';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 export default function Index() {
-    let list = getDonationList();
-    const { commingShow, setComingShow } = useComingSoon();
+  const { seComingData } = useContext(AppContext);
+  let list = getDonationList();
     return <>
         <div className={styles.donation_wrap}>
             <h3>Donation</h3>
@@ -17,7 +17,7 @@ export default function Index() {
                             <p>{item.type}</p>
                             <p>{item.address}</p>
                             <i onClick={() => {
-                                setComingShow(true)
+                                seComingData({value:'Copy Success',isShow:true})
                                 copy(item.address);
                             }}>COPY</i>
                         </li>
@@ -25,7 +25,6 @@ export default function Index() {
                 }
             </ul>
         </div>
-        {commingShow && <ComingSoon value='Copy Success' />}
     </>
 }
 

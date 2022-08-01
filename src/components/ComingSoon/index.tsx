@@ -1,10 +1,9 @@
+import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 interface type {
-  value?:string
+  value?: string,
+  isShow: boolean
 }
-export default function ComingSoon({value="Coming Soon！"}:type) {
- 
-  return <div className={styles.coming_pop}>
-    <p>{value}</p>
-  </div> 
+export default function ComingSoon({ value = "Coming Soon！", isShow = false }: type) {
+  return isShow ? <div className={styles.coming_pop} ><p>{value}</p></div > : null
 }
