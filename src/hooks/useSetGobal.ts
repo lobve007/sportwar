@@ -44,13 +44,13 @@ export function useSetBanner() {
     const { pathname } = location;
     useEffect(() => {
         switch (pathname) {
-            case '/mining':
+            case '/farm':
                 setBannerType('farm');
                 break;
-            case '/mining/lp':
+            case '/lpfram':
                 setBannerType('farm');
                 break;
-            case '/mining/nft':
+            case '/lpfram':
                 setBannerType('farm');
                 break;
             case '/roadmap':
