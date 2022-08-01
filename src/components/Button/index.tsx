@@ -4,15 +4,15 @@ interface btnObj {
     text: string,
     type?: 'default' | 'gray' | 'gold' | 'gray2' | 'black',
     linkUrl?: string,
-    clcikHandle?:any,
-    disabled?:boolean
+    clcikHandle?: any,
+    disabled?: boolean
 }
 export default function Button({
     text,
     type = "default",
     linkUrl = "",
-    clcikHandle=()=>{},
+    clcikHandle = () => { },
     disabled
 }: btnObj) {
-    return <Link to={linkUrl} className={`${styles[`btn-${type}`]} ${disabled?styles.disabled:''}`} onClick={clcikHandle}>{text}</Link>
+    return <Link to={linkUrl} className={`${styles[`btn-${type}`]} ${disabled ? styles.disabled : ''}`} onClick={clcikHandle}>{text}</Link>
 }

@@ -10,56 +10,43 @@ import styles from './index.module.scss';
 const ADDRESS_LP_TOKEN = '0x76B50A3a20Decf43169309C6212BAD681Fc17369'
 const ADDRESS_REWARD_TOKEN = '0xaf532400B31314195EA88aDdD4C13fE7d69211C7'
 const ADDRESS_POOL = '0xCf33b46196C94982288b10eA3d63B4D1757fE939'
-const reg =/(^[1-9]([0-9]+)?(\.[0-9]{1,6})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
+const reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,6})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
 export default function Stake({ setStakeShow }: any) {
     const lpTokenInfo = useErc20Info(ADDRESS_LP_TOKEN);
     const lpBalance = useERC20Balance(ADDRESS_LP_TOKEN);
     const { stake, withdraw } = usePool();
     const { userPoolInfo, refresh } = useUserPoolInfo();
     const { symbol, decimals } = useErc20Info(ADDRESS_REWARD_TOKEN);
-    const myValue = +formatUnits(lpBalance, lpTokenInfo.decimals);
-    const lpValue = +formatUnits(userPoolInfo.balance, lpTokenInfo.decimals);
+    const myValue = formatUnits(lpBalance, lpTokenInfo.decimals);
+    const lpValue = formatUnits(userPoolInfo.balance, lpTokenInfo.decimals);
     const [amount, setAmount] = useState(lpValue);
+    const [inputDisables, setInputDisables] = useState(false);
     useEffect(() => {
-        setAmount(+lpValue);
+        setAmount(lpValue);
     }, [lpValue])
     return <div className={styles.stake}>
         <h3>Adjust the pledge amount</h3>
         <p>Pledgable quantity：{formatUnits(lpBalance, lpTokenInfo.decimals)}</p>
         <div className={styles.count_num_pop}>
-            <input value={amount} onChange={(e)=>{
-                if(reg.test(e.target.value)) {
-                    console.log(3)
+            <input value={amount} onChange={(e) => {
+                if (!reg.test(e.target.value)) {
+                    setInputDisables(true)
                 } else {
-                    console.log(4);
-                    
+                    setInputDisables(false)
                 }
-                
-                setAmount(+e.target.value)}
-
-                } />
+                setAmount(e.target.value)
+            }
+            } />
         </div>
         <div className={styles.btn_wrap}>
             <Button text="Cancel" type='gray' clcikHandle={() => setStakeShow(false)} />
-            <Button text="Upgrade" clcikHandle={() => {
-                if (isNaN(amount)) {
-                    alert('invalid stake amount')
-                    return
-                }
-                
-                // if (amount + lpValue > myValue) {
-                //     alert('insufficent lp balance!')
-                //     return
-                // }
-                // if (amount > lpValue) {
-                //     alert('insufficent staked lp balance!')
-                //     return
-                // }
-
+            <Button text="Upgrade" disabled={inputDisables} clcikHandle={() => {
                 if (amount > lpValue) {
+                    // @ts-ignore
                     stake(amount - lpValue)
                     setStakeShow(false)
                 } else if (amount < lpValue) {
+                    // @ts-ignore
                     withdraw(lpValue - amount)
                     setStakeShow(false)
                 } else if (amount == lpValue) {
