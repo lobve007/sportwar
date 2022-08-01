@@ -10,10 +10,10 @@ export function useSetPageIndex() {
             case '/farm':
                 setPageIndex(2);
                 break;
-            case '/farm/lp':
+            case '/lpfram':
                 setPageIndex(2);
                 break;
-            case '/farm/nft':
+            case '/fnftfram':
                 setPageIndex(2);
                 break;
             case '/roadmap':
