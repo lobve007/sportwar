@@ -4,24 +4,21 @@ import BuyPop from '../BuyPop';
 import NftCard from '../NftCard';
 import styles from './index.module.scss';
 interface type {
-    state: string
+    state: string,
+    clcikHandle:any
 }
-export default function BlindBox(prop: type) {
-
+export default function BlindBox({ state,
+    clcikHandle}: type) {
     const [buyPopIsShow, setBuyPopIsShow] = useState(false);
     const [nftCardIsShow, setNftCardIsShow] = useState(false);
-    let {
-        state
-    } = prop;
-    let btnText = "", btnType, clcikHandle;
+   
+    let btnText = "", btnType;
 
     switch (state) {
         case '1':
             btnText = 'Purchase now'
             btnType = "default"
-            clcikHandle = () => {
-                setBuyPopIsShow(true)
-            }
+         
             break;
         case '2':
             btnText = 'Open'
@@ -29,7 +26,7 @@ export default function BlindBox(prop: type) {
             break;
         case '3':
             btnText = 'To be opened'
-            btnType = "gold"
+            btnType = "gray2"
             break;
         case '4':
             btnText = 'Sold-out'
@@ -38,9 +35,6 @@ export default function BlindBox(prop: type) {
         case '5':
             btnText = 'Upgrade/Evolve'
             btnType = "default"
-            clcikHandle = () => {
-                setNftCardIsShow(true)
-            }
             break;
         default:
             break;

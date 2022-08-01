@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core';
 import { formatUnits } from 'ethers/lib/utils';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../components/Button';
 import { useERC20Balance } from '../../hooks/useErc20Balance';
 import useErc20Info from '../../hooks/useErc20Info';
@@ -15,7 +15,11 @@ export default function Stake({ setStakeShow }: any) {
     const lpBalance = useERC20Balance(ADDRESS_LP_TOKEN);
     const { userPoolInfo, refresh } = useUserPoolInfo();
     const { symbol, decimals } = useErc20Info(ADDRESS_REWARD_TOKEN);
-    const [amount, setAmount] = useState(0)
+    const value = formatUnits(userPoolInfo.balance, lpTokenInfo.decimals)
+    const [amount, setAmount] = useState(Number(value));
+    useEffect(()=>{
+        setAmount(+value)
+    },[value])
     const { account } = useWeb3React();
     const { mint } = useLpToken()
     return <div className={styles.stake}>
@@ -23,17 +27,11 @@ export default function Stake({ setStakeShow }: any) {
         <h3>Adjust the pledge amount</h3>
         <p>Pledgable quantity：{formatUnits(lpBalance, lpTokenInfo.decimals)}</p>
         <div className={styles.count_num_pop}>
-            <input value={amount} onChange={e => setAmount(+e.target.value)}  />
+            <input value={amount} onChange={e => setAmount(+e.target.value)}   />
         </div>
         <div className={styles.btn_wrap}>
             <Button text="Cancel" type='gray' clcikHandle={() => setStakeShow(false)} />
-            <Button text="Upgrade" clcikHandle={() => {
-                if (isNaN(amount)) {
-                    alert('invalid amount')
-                    return
-                }
-                mint(account as string, amount)
-            }} />
+            <Button text="Upgrade" />
         </div>
     </div>
 }

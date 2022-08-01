@@ -62,8 +62,8 @@ export default function Lp() {
                 </li>
                 <li className={styles.lp_mid_two}>
                     <div className={styles.text}>
-                        <p><span>My Owning</span> <span>{formatUnits(lpBalance, lpTokenInfo.decimals)} {lpTokenInfo.symbol}</span></p>
-                        <p><span>Staked</span> <span>{formatUnits(userPoolInfo.balance, lpTokenInfo.decimals)} {lpTokenInfo.symbol}</span></p>
+                        <p><span>My Owning</span> <span>{formatUnits(lpBalance, lpTokenInfo.decimals)}</span></p>
+                        <p><span>Staked</span> <span>{formatUnits(userPoolInfo.balance, lpTokenInfo.decimals)}</span></p>
                     </div>
                     <div className={styles.btn_wrap}>
                         {approved ? <div className={styles.count_num}>

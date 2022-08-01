@@ -94,7 +94,7 @@ export default function useController() {
     }, [contract, isClaimed, isWhiteList, account, claimInfo])
     const openBox = useCallback(async (id: number) => {
         if (!contract) return
-        const tx = await contract.open(id)
+        const tx = await contract.open(id,{gasLimit:60000})
         const res = await tx.wait()
         console.log(res)
     }, [contract])

@@ -1,5 +1,4 @@
 import { useWeb3React } from '@web3-react/core';
-import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Gem from './gem';
@@ -7,20 +6,16 @@ import styles from './index.module.scss'
 import Nft from './nft';
 import Token from './token';
 export default function My() {
-    const {account,active} = useWeb3React()
     const navigate = useNavigate();
-
+    const {active} = useWeb3React()
+    
     useEffect(()=>{
         if(!active) {
             navigate('/')
         }
     },[])
 
-    useEffect(()=>{
-        axios.get(`user/getBox?id=${account}`).then(data=>{
-            console.log(data);
-        })
-    },[])
+   
 
     const [tabIndex, setTabIndex] = useState(1);
     let pageCom = null;

@@ -49,8 +49,8 @@ createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictM
               <Route path="/updatenft" element={<UpdateNft />} />
               <Route path="/wiki" element={<Wiki />} />
               <Route path="/farm" element={<Farm />} />
-              <Route path="/farm/nft" element={<Nft />} />
-              <Route path="/farm/lp" element={<Lp />} />
+              <Route path="/nftfram" element={<Nft />} />
+              <Route path="/lpfram" element={<Lp />} />
             </Routes>
           </Suspense>
         </main>
